@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Doctor Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h1>Doctor Dashboard</h1>
+
+    <h2>Add Slot</h2>
+    <form id="addSlotForm">
+        <input type="date" name="date" required>
+        <input type="time" name="time" required>
+        <button type="submit">Add Slot</button>
+    </form>
+
+    <h2>My Slots</h2>
+    <div id="slotList"></div>
+
+    <button id="logoutBtn">Logout</button>
+</div>
+<script src="scripts/doctor_dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h1>Register</h1>
+
+    <form id="registerForm">
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="password" name="password" placeholder="Password" required>
+
+        <select name="role" id="roleSelect" required>
+            <option value="">Select Role</option>
+            <option value="doctor">Doctor</option>
+            <option value="patient">Patient</option>
+            <option value="admin">Admin</option>
+        </select>
+
+        <!-- Doctor fields -->
+        <div id="doctorFields" style="display:none;">
+            <input type="text" name="specialization" placeholder="Specialization">
+            <input type="number" name="experience" placeholder="Experience (years)">
+        </div>
+
+        <!-- Patient fields -->
+        <div id="patientFields" style="display:none;">
+            <input type="number" name="age" placeholder="Age">
+            <select name="gender">
+                <option value="">Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+
+        <button type="submit">Register</button>
+    </form>
+
+    <p style="text-align:center;margin-top:10px;">
+        Already registered? <a href="login.html">Login</a>
+    </p>
+</div>
+
+<script src="scripts/auth.js"></script>
+<script>
+    const roleSelect = document.getElementById("roleSelect");
+    const doctorFields = document.getElementById("doctorFields");
+    const patientFields = document.getElementById("patientFields");
+
+    roleSelect.addEventListener("change", () => {
+        const role = roleSelect.value;
+        if(role === "doctor"){
+            doctorFields.style.display = "block";
+            patientFields.style.display = "none";
+        } else if(role === "patient"){
+            doctorFields.style.display = "none";
+            patientFields.style.display = "block";
+        } else {
+            doctorFields.style.display = "none";
+            patientFields.style.display = "none";
+        }
+    });
+</script>
+</body>
+</html>

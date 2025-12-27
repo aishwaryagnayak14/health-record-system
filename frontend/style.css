@@ -1,0 +1,201 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    min-height: 100vh;
+    background: url("assets/health.jpg") no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    background-color: #9059f7;
+  
+  background-blend-mode: multiply; 
+}
+
+
+.container {
+     width: 100%;
+     max-width: 500px;
+     padding: 30px;
+     border-radius: 12px; 
+     background: rgba(255, 255, 255, 0.734);        
+     backdrop-filter: blur(1px);
+     -webkit-backdrop-filter: blur(8px);
+     border: 1px solid rgba(255, 255, 255, 0.4);
+     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.663);
+     }
+
+
+h1, h2, h3 {
+    text-align: center;
+    color: #0f3b5f; 
+}
+
+h2 {
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #305484; 
+    color: white;
+    border: none;
+    border-radius: 8px; 
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s all;
+}
+
+button:hover {
+    background: #1C63C7; 
+    transform: translateY(-2px); 
+}
+
+
+#logoutBtn {
+    margin-bottom: 20px;
+    background: #3a6cc9; 
+}
+
+#logoutBtn:hover {
+    background: #3f78e2;
+}
+
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 6px;
+    border: 1px solid #cfd9e2;
+    background: #f9fbfd;
+    transition: 0.3s all;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #2F80ED; 
+    background: #ffffff;
+}
+
+
+#doctorList,
+#slotList {
+    display: flex;
+    flex-direction: column; 
+}
+
+#doctorList div,
+#slotList div {
+    border: 1px solid #d1dbe5; 
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 12px;
+    background: #ffffff; 
+    transition: 0.3s all;
+}
+
+#doctorList div:hover,
+#slotList div:hover {
+    background: #e6f2f7; 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
+}
+
+#slotList p {
+    margin: 6px 0;
+    font-size: 14px;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+th {
+    background: #0f3b5f; 
+    color: white;
+    padding: 10px;
+    text-align: left;
+    border-radius: 4px 4px 0 0;
+}
+
+td {
+    padding: 10px;
+    border-bottom: 1px solid #dfe6ef;
+}
+
+tr:nth-child(even) {
+    background: #f4f7fb;  
+}
+
+
+
+@media (max-width: 768px) {
+
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 20px;
+        max-width: 100%;
+        border-radius: 6px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    input, select, button {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    
+    #doctorList div,
+    #slotList div {
+        padding: 12px;
+    }
+
+    
+    table {
+        font-size: 12px;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    h1 {
+        font-size: 1.3rem;
+    }
+
+    h2 {
+        font-size: 1.1rem;
+    }
+
+    button {
+        font-size: 0.85rem;
+    }
+}
